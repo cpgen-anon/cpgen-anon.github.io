@@ -214,7 +214,7 @@
 
 <br>
 
-<h3 class="title is-4" style="margin-bottom: 0.8em; color:#467f28">Evaluation Videos</h3>
+<h3 class="title is-3 has-text-centered" style="margin-bottom: 0.8em; color:#467f28">Evaluation Videos and Digital Twins</h3>
 <div class="container block is-centered">
   <div class="columns is-centered">
     <div class="column is-2" style="width: 20%;">
@@ -250,6 +250,7 @@
 </div>
 <div class="columns is-centered">
   <div class="column has-text-centered">
+    <img id ="test-img" src="media/images/dig_twin/mug-cleanup.png" style="width: 80%; margin-bottom: 10px;">
     <p style="text-align:center;">
       <video id="test-video" width="80%" height="80%" controls autoplay loop muted>
         <source src="media/videos/real_evals/mug-cleanup.mp4" type="video/mp4">
@@ -265,7 +266,7 @@
 
 
 
-<h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#467f28">Quantitative Results</h3>
+<h3 class="title is-3 has-text-centered" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#467f28">Quantitative Results</h3>
 <div class="columns is-vcentered  is-centered">
   <img style="margin-top: 15px; width: 90%;" src="media/images/real_result.png" class="method-image" />
 </div>
@@ -899,6 +900,8 @@ We additionally thank Timothy Chen, Wil Thomason, Zak Kingston, Tyler Lum, Priya
     // var spatial_id = document.getElementById("spatial-selection").value;
 
     // console.log("SelectTestVideo", task_name, spatial_id)
+    var dig_twin = document.getElementById("test-img");
+    dig_twin.src = "media/images/dig_twin/" + task_name + ".png";
     var video = document.getElementById("test-video");
     // video.src = "media/videos/evaluations/" + task_name + "/" + spatial_id + ".mp4";
     video.src = "media/videos/real_evals/" + task_name + ".mp4";
