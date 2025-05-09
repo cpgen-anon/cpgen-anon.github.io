@@ -250,7 +250,10 @@
 </div>
 <div class="columns is-centered">
   <div class="column has-text-centered">
-    <img id ="test-img" src="media/images/dig_twin/mug-cleanup.png" style="width: 80%; margin-bottom: 10px;">
+    <figure style="text-align: center;">
+      <img id="test-img" src="media/images/dig_twin/mug-cleanup.png" style="width: 80%; margin-bottom: 10px;">
+      <figcaption>Digital twin environment for real world task from third-person agentview</figcaption>
+    </figure>
     <p style="text-align:center;">
       <video id="test-video" width="80%" height="80%" controls autoplay loop muted>
         <source src="media/videos/real_evals/mug-cleanup.mp4" type="video/mp4">
@@ -267,8 +270,14 @@
 
 
 <h3 class="title is-3 has-text-centered" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#467f28">Quantitative Results</h3>
-<div class="columns is-vcentered  is-centered">
-  <img style="margin-top: 15px; width: 90%;" src="media/images/real_result.png" class="method-image" />
+<div class="columns is-vcentered is-centered">
+  <div class="column is-10">
+    <figure class="image">
+      <img style="margin-top: 15px; width: 90%;" src="media/images/real_result.png" class="method-image" />
+      <figcaption style="text-align: center; color: #2f2f2f; margin-top: 0.5em;"><b><em>CP-Gen</em> policies succesfully transfer zero-shot sim2real.</b> Policies take in depth and segmentation
+        masks, and tasks feature both object-geometry and object pose variations </figcaption>
+    </figure>
+  </div>
 </div>
 <br>
 
