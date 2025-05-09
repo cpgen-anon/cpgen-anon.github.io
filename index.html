@@ -194,6 +194,83 @@
   </div>
 </div>
 
+<br>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters">
+          <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;">
+            <strong>
+              <em>CP-Gen</em> enables <b>zero-shot sim-to-real</b> transfer across <b>object-geometry and object-pose variation</b> with 1 human demonstration provided in simulation
+            </strong>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+<h3 class="title is-4" style="margin-bottom: 0.8em; color:#467f28">Evaluation Videos</h3>
+<div class="container block is-centered">
+  <div class="columns is-centered">
+    <div class="column is-2" style="width: 20%;">
+        <div class="select" style="display: block;">
+            <select id="task-selection" style="width: 100%;" onchange="SelectTestVideo()">
+                <option value="mug-cleanup">Mug-Cleanup</option>
+                <option value="hammer-cleanup">Hammer-Cleanup</option>
+                <option value="mug-hanging">Mug-Hanging</option>
+                <option value="wineglass-hanging">Wineglass-Hanging</option>
+            </select>
+        </div>
+    </div>
+    <!-- <div class="column is-2" style="width: 20%;">
+        <div class="select" style="display: block;">
+            <select id="spatial-selection" style="width: 100%;" onchange="SelectTestVideo()">
+              <option value="ood1">O.O.D. #1</option>
+              <option value="ood2">O.O.D. #2</option>
+              <option value="ood3">O.O.D. #3</option>
+              <option value="ood4">O.O.D. #4</option>
+              <option value="fail">Failure</option>
+            </select>
+        </div>
+    </div> -->
+    <!-- <div class="column is-2">
+      <button class="button is-info is-outlined" id="shuffle-video" style="width: 80%; color: #6510ad; border-color: #6510ad;">
+          <span class="icon">
+              <ion-icon name="shuffle-outline" role="img" class="md hydrated"></ion-icon>
+          </span>
+          <span>Shuffle</span>
+      </button>
+  </div> -->
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column has-text-centered">
+    <p style="text-align:center;">
+      <video id="test-video" width="80%" height="80%" controls autoplay loop muted>
+        <source src="media/videos/real_evals/mug-cleanup.mp4" type="video/mp4">
+      </video>
+    </p>
+  </div>
+</div>
+<!-- <p class="content" style="text-align: left">
+  For quantitative evaluation, we conudct a total of 530 policy rollouts on the 8 tasks with fully randomized object configurations 
+  within the feasible workspace range. Here, we provide the videos of 4 successful rollouts and 1 failed rollout for each of the 8 tasks.
+</p> -->
+
+
+
+
+<h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#467f28">Quantitative Results</h3>
+<div class="columns is-vcentered  is-centered">
+  <img style="margin-top: 15px; width: 90%;" src="media/images/real_result.png" class="method-image" />
+</div>
+<br>
+
 <!-- <br> -->
 <!-- <section class="hero">
   <div class="hero-body">
@@ -525,80 +602,6 @@
     <!-- </div> -->
     <br>
 
-    <section class="hero is-light is-small">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-three-quarters">
-              <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;">
-                <strong>
-                  <em>CP-Gen</em> enables <b>zero-shot sim-to-real</b> transfer across <b>object-geometry and object-pose variation</b> with 1 human demonstration provided in simulation
-                </strong>
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <br>
-
-    <h3 class="title is-4" style="margin-bottom: 0.8em; color:#467f28">Evaluation Videos</h3>
-    <div class="container block is-centered">
-      <div class="columns is-centered">
-        <div class="column is-2" style="width: 20%;">
-            <div class="select" style="display: block;">
-                <select id="task-selection" style="width: 100%;" onchange="SelectTestVideo()">
-                    <option value="mug-cleanup">Mug-Cleanup</option>
-                    <option value="hammer-cleanup">Hammer-Cleanup</option>
-                    <option value="mug-hanging">Mug-Hanging</option>
-                    <option value="wineglass-hanging">Wineglass-Hanging</option>
-                </select>
-            </div>
-        </div>
-        <!-- <div class="column is-2" style="width: 20%;">
-            <div class="select" style="display: block;">
-                <select id="spatial-selection" style="width: 100%;" onchange="SelectTestVideo()">
-                  <option value="ood1">O.O.D. #1</option>
-                  <option value="ood2">O.O.D. #2</option>
-                  <option value="ood3">O.O.D. #3</option>
-                  <option value="ood4">O.O.D. #4</option>
-                  <option value="fail">Failure</option>
-                </select>
-            </div>
-        </div> -->
-        <!-- <div class="column is-2">
-          <button class="button is-info is-outlined" id="shuffle-video" style="width: 80%; color: #6510ad; border-color: #6510ad;">
-              <span class="icon">
-                  <ion-icon name="shuffle-outline" role="img" class="md hydrated"></ion-icon>
-              </span>
-              <span>Shuffle</span>
-          </button>
-      </div> -->
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <p style="text-align:center;">
-          <video id="test-video" width="80%" height="80%" controls autoplay loop muted>
-            <source src="media/videos/real_evals/mug-cleanup.mp4" type="video/mp4">
-          </video>
-        </p>
-      </div>
-    </div>
-    <!-- <p class="content" style="text-align: left">
-      For quantitative evaluation, we conudct a total of 530 policy rollouts on the 8 tasks with fully randomized object configurations 
-      within the feasible workspace range. Here, we provide the videos of 4 successful rollouts and 1 failed rollout for each of the 8 tasks.
-    </p> -->
-
-
-    
-
-    <h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#467f28">Quantitative Results</h3>
-    <div class="columns is-vcentered  is-centered">
-      <img style="margin-top: 15px; width: 90%;" src="media/images/real_result.png" class="method-image" />
-    </div>
-    <br>
     <!-- <p class="content has-text-justified">
       <strong><em>Cp-Gen</em> policies successfully transfer zero-shot sim2real</strong>. Policies take in depth and segmentation masks, and tasks feature both object-geometry and object pose variations.
     </p> -->
