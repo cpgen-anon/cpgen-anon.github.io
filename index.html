@@ -260,31 +260,28 @@
 <br>
 <hr style="margin-top: 1em;">
 <div class="rows is-centered has-text-centered">
-  <h2 class="title is-3" style="margin-bottom: 0.8em; color:#6510ad"><i>DemoGen</i> for Spatial Generalization</h2>
+  <h2 class="title is-3" style="margin-bottom: 0.8em; color:#6510ad"><i>CP-Gen</i> for Geometry and Spatial Generalization</h2>
     <h3 class="title is-4" style="margin-bottom: 0.5em; color:#6510ad">Simulated Experiments</h3>
       <div class="columns is-vcentered  is-centered">
-        <img style="margin-top: 15px; width: 90%;" src="media/images/sim-tasks.png" class="method-image" />
+        <img style="margin-top: 15px; width: 90%;" src="media/images/sim_environment.png" class="method-image" />
       </div>
       <div class="columns is-vcentered  is-centered">
         <img style="margin-top: 15px; width: 90%;" src="media/images/sim-results.png" class="method-image" />
       </div>
-      <p class="content has-text-justified">
-        The effectiveness of <i>DemoGen</i> is verified on 8 modified MetaWorld tasks with enlarged object randomization ranges. 
-        We report the maximum/averaged success rates over 3 seeds of visuomotor policies trained on <i>DemoGen</i>-generated datasets with <strong>only one</strong>
-        source demonstration per task. The results indicate <i>DemoGen</i> has the potential to maintain the policy performance with over 20x reduced human effort for data collection.
+      <p><strong><em>CP-Gen</em> achieves state-of-the-art results on the <em>MimicGen</em> simulation benchmark</strong>. On the original <em>MimicGen</em> benchmark (default task variants), <em>CP-Gen</em> achieves an average success rate of 88% compared to <em>MimicGen</em>'s 67%. On our custom benchmark containing <em>Geometry Generalization</em> task variants which feature novel object geometries (denoted as TaskG), <em>CP-Gen</em> achieves an average success rate of 70%, outperforming <em>MimicGen</em>'s 37% by a margin of 33%. These results highlight <em>CP-Gen</em>'s strong generalization not only to pose variations but also to challenging geometric variations. Bolded numbers indicate the best-performing method within each modality group.</p>
       </p>
     <h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#6510ad">Real-World Protocols</h3>
       <div class="columns is-vcentered  is-centered">
         <img style="margin-top: 15px;" src="media/images/spatial-protocol.png" class="method-image" />
       </div>
-      <p class="content has-text-justified">
+      <!-- <p class="content has-text-justified">
         We adhere to a rigorous protocol for evaluating spatial generalization. (a) Workspace setups. (b) The full-size evaluation 
         workspace covering the full entend of the robot end-effectors on the table surface. 
         (c) The <i>DemoGen</i> generation strategy targeting the evaluated configurations along with small-range perturbations.
-      </p>
+      </p> -->
 
-    <h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.8em; color:#6510ad">Tasks & Source Demonstrations</h3>
-    <div class="rows">
+    <!-- <h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.8em; color:#6510ad">Tasks & Source Demonstrations</h3> -->
+    <!-- <div class="rows"> -->
 
 
       <!-- <p class="content has-text-centered">
@@ -447,23 +444,20 @@
         </p>
       </div>
     </div>
-    <p class="content" style="text-align: left">
+    <!-- <p class="content" style="text-align: left">
       For quantitative evaluation, we conudct a total of 530 policy rollouts on the 8 tasks with fully randomized object configurations 
       within the feasible workspace range. Here, we provide the videos of 4 successful rollouts and 1 failed rollout for each of the 8 tasks.
-    </p>
+    </p> -->
 
     <h3 class="title is-4" style="margin-top: 1.8em; margin-bottom: 0.5em; color:#6510ad">Quantitative Results</h3>
     <div class="columns is-vcentered  is-centered">
-      <img style="margin-top: 15px; width: 90%;" src="media/images/real-results.png" class="method-image" />
+      <img style="margin-top: 15px; width: 90%;" src="media/images/real_result.png" class="method-image" />
     </div>
     <p class="content has-text-justified">
-      Compared with the source demonstrations, <i>DemoGen</i>-generated datasets enable the agents to display a more adaptive response to
-      diverse evaluated configurations, resulting in significantly higher success rates. Additionally, we visualize the spatial heatmaps
-      of success rates for the evaluated configurations, showing diminished success rates on configurations more far away from the demonstrated ones.
-      We attribute this decline to the <a href="#limitation">visual mismatch</a> problem caused by single-view observations.
+      <strong><em>Cp-Gen</em> policies successfully transfer zero-shot sim2real</strong>. Policies take in depth and segmentation masks, and tasks feature both object-geometry and object pose variations.
     </p>
 
-    <div class="rows is-centered has-text-centered">
+    <!-- <div class="rows is-centered has-text-centered">
     <h2 id="cost" class="title is-4" style="margin-top: 1.8em; margin-bottom: 1.2em; color:#6510ad">Time Cost for Generating Real-World Demonstrations</h2>
     <div class="columns">
       <div class="columns is-vcentered  is-centered">
@@ -479,13 +473,13 @@
         </p>
       </div>
     </div>
-</div>
+</div> -->
 
 
-<br>
-<br>
-<hr style="margin-top: 1em;">
-<div class="rows is-centered has-text-centered">
+<!-- <br> -->
+<!-- <br> -->
+<!-- <hr style="margin-top: 1em;"> -->
+<!-- <div class="rows is-centered has-text-centered">
   <h2 class="title is-3" style="margin-bottom: 0.8em; color:#6510ad"><i>DemoGen</i> for Disturbance Resistance</h2>
   <h3 class="title is-4" style="margin-bottom: 0.5em; color:#6510ad">Augmentation for Disturbance Resistance (ADR)</h3>
   <br>
@@ -590,11 +584,11 @@
       Still starting with only one human-collected demonstration as the source demonstration, we show that
        the <i>DemoGen w/ ADR</i>-enabled policy is robust under up to 5 times of random disturbances in a row.
     </p>
-</div>
+</div> -->
 
-<br>
-<hr style="margin-top: 1em;">
-<div class="rows is-centered has-text-centered">
+<!-- <br> -->
+<!-- <hr style="margin-top: 1em;"> -->
+<!-- <div class="rows is-centered has-text-centered">
   <h2 class="title is-3" style="margin-bottom: 0.8em; color:#6510ad"><i>DemoGen</i> for Obstacle Avoidance</h2>
   <h3 class="title is-4" style="margin-bottom: 0.5em; color:#6510ad">Augmentation for Obstacle Avoidance</h3>
   <br>
@@ -648,11 +642,11 @@
       For evaluation, we position obstacles with diverse shapes in the middle of the workspace. The <i>DemoGen</i>-enabled policy successfully avoids various unseen obstacles.
       Notably, in scenarios without obstacles, the agent follows the lower trajectory observed in the source demonstrations, indicating its responsiveness to environmental variations.
     </p>
-</div>
+</div> -->
 
-<br>
-<hr style="margin-top: 1em;">
-<div class="rows is-centered has-text-centered">
+<!-- <br> -->
+<!-- <hr style="margin-top: 1em;"> -->
+<!-- <div class="rows is-centered has-text-centered">
   <h2 id="empirical" class="title is-3" style="margin-bottom: 1em; color:#6510ad">Empirical Study: Spatial Generalization of Visuomotor Policies</h2>
   <div class="columns is-vcentered  is-centered">
     <img style="width: 100%;" src="media/images/empirical.png" class="method-image" />
@@ -671,12 +665,12 @@
     </div>
   </div>
   
-</div>
+</div> -->
 
 
-<br>
-<hr style="margin-top: 1em;">
-<div class="rows is-centered has-text-centered">
+<!-- <br> -->
+<!-- <hr style="margin-top: 1em;"> -->
+<!-- <div class="rows is-centered has-text-centered">
   <h2 id="limitation" class="title is-3" style="margin-bottom: 1.1em; color:#6510ad">Limitation: The Visual Mismatch Problem</h2>
   <div class="columns">
     <div class="columns is-vcentered  is-centered">
@@ -693,33 +687,29 @@
   </div>
   
   
-</div>
+</div> -->
 
 
-<br>
-<hr style="margin-top: 1em;">
-<h2 class="title is-3 is-centered has-text-centered" style="color:#6510ad;">Acknowledgments</h2>
-<p style="text-align: left">
-  We would like to give special thanks to Galaxea Inc. for providing the R1 robot and
-   Jianning Cui, Ke Dong, Haoyin Fan, and Yixiu Li for their technical support. 
-   We also thank Gu Zhang, Han Zhang, and Songbo Hu for hardware setup and data collection, 
-   Yifeng Zhu and Tianming Wei for discussing the controllers in the simulator, 
-   and Widyadewi Soedarmadji for the presentation advice.
-Tsinghua University Dushi Program supports this project.
-</p>
+<!-- <br> -->
+<!-- <hr style="margin-top: 1em;"> -->
+<!-- <h2 class="title is-3 is-centered has-text-centered" style="color:#6510ad;">Acknowledgments</h2> -->
+<!-- <p style="text-align: left">
+  Toyota Research Institute provided funds to support this work.
+We additionally thank Timothy Chen, Wil Thomason, Zak Kingston, Tyler Lum, Priya Sundaresan, Fanyun Sun, Yifeng Zhu, Zhenyu Jiang, Mingyo Seo, Megan Hu, William Chong, Marion Lepert, and Brent Yi for helpful discussions throughout the project.
+</p> -->
 
 
-<br>
-<hr style="margin-top: 1em;">
-<h2 class="title is-3 is-centered has-text-centered" style="color:#6510ad;">BibTeX</h2>
-<p class="bibtex" style="text-align: left">
+<!-- <br> -->
+<!-- <hr style="margin-top: 1em;"> -->
+<!-- <h2 class="title is-3 is-centered has-text-centered" style="color:#6510ad;">BibTeX</h2> -->
+<!-- <p class="bibtex" style="text-align: left">
   @article{xue2025demogen, <br>
   &nbsp;&nbsp;title={DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy Learning}, <br>
   &nbsp;&nbsp;author={Xue, Zhengrong and Deng, Shuying and Chen, Zhenyang and Wang, Yixuan and Yuan, Zhecheng and Xu, Huazhe}, <br>
   &nbsp;&nbsp;journal={arXiv preprint arXiv:2502.16932}, <br>
   &nbsp;&nbsp;year={2025} <br>
   }
-</p>
+</p> -->
 
 </section>
 </div>
